@@ -62,7 +62,7 @@ export default function Card({ question, incorrectAnswers, correctAnswer, showAn
     return allAnswers.map((answer, index) => (
       <li
         key={answer.id}
-        {/* This is very complicated for a setting classes
+        /* This is very complicated for a setting classes
         I came up with this to make it a little easier to read
 
         className={`answer-button
@@ -71,7 +71,7 @@ export default function Card({ question, incorrectAnswers, correctAnswer, showAn
 
         No more ternary :)
         Moving showAnswer outside of gradeQuiz means gradeQuiz will only run when showAnswers is true instead of running on every render and checking if showAnswers is true inside of it
-        */}
+        */
         className={
           `answer-button 
           ${selectedAnswer.answer === answer.answer
