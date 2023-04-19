@@ -38,7 +38,6 @@ export default function Intro ({ start, handleUserChoices }) {
     start();
     handleUserChoices(number, difficulty, category, isTimed)
   }
-  // do I need event.preventDefault() ???
 
   // button should be part of the form
   return (
