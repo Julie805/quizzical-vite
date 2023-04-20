@@ -1,34 +1,19 @@
-import './form.css'
-import Categories from "./form-components/Form"
+import "./form.css"
+import FormCategories from "./form-components/FormCategories"
+import FormQuestionQuantity from "./form-components/FormQuestionQuantity"
 
 // This is a beefy component
 // Might want to break each input into its own component(mimic a custom ui-library/start building your own ui-library)
 // input values change here so you should probably try to handle the change here
 
-// const categories = [
-//   { value: "", label: "All Categories" },
-//   { value: "9", label: "General Knowlege" },
-//   { value: "10", label: "Books" },
-//   { value: "17", label: "Science & Nature" },
-//   { value: "18", label: "Science & Computers" },
-//   { value: "19", label: "Mathematics" },
-//   { value: "20", label: "Mythology" },
-//   { value: "21", label: "Sports" },
-//   { value: "22", label: "Geography" },
-//   { value: "23", label: "History" },
-//   { value: "24", label: "Politics" },
-//   { value: "25", label: "Art" },
-//   { value: "28", label: "Vehicles" },
-// ]
+
 
 export default function Form({ number, handleChange }) {
-  // const categoryOptions = categories.map((category => {
-  //   return <option value="{category.value}">{category.label}</option>
-  // }))
-
+ 
   return (
     <form className="form-container">
-      <div className="form-item">
+      <FormQuestionQuantity number={number} handleChange={handleChange} />
+      {/* <div className="form-item">
         <label htmlFor="number">Number of questions:</label>
         <input
           type="number"
@@ -38,7 +23,7 @@ export default function Form({ number, handleChange }) {
           value={number}
           onChange={handleChange}
         />
-      </div>
+      </div> */}
       <div className="form-item">
         <label htmlFor="difficulty">Select difficulty level:</label>
         <select id="difficulty" name="difficulty" onChange={handleChange}>
@@ -48,7 +33,7 @@ export default function Form({ number, handleChange }) {
           <option value="hard">Hard</option>
         </select>
       </div>
-      <Categories onChange={handleChange} />
+      <FormCategories onChange={handleChange} />
       {/* <div className="form-item">
         <label htmlFor="category">Select quiz category:</label>
         <select id="category" name="category" onChange={handleChange}>

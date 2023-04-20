@@ -1,6 +1,6 @@
-import './form.css'
+import '../form.css'
 
-const categories = [
+const options = [
   { value: "", label: "All Categories" },
   { value: "9", label: "General Knowlege" },
   { value: "10", label: "Books" },
@@ -16,9 +16,9 @@ const categories = [
   { value: "28", label: "Vehicles" },
 ]
 
-export default function Categories( {handleChange}) {
-  const categoryOptions = categories.map((category => {
-    return <option value="{category.value}">{category.label}</option>
+export default function FormCategories( {handleChange}) {
+  const categoryOptions = options.map((item => {
+    return <option value="{item.value}">{item.label}</option>
   }))
 
    return (
