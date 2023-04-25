@@ -1,5 +1,6 @@
 import "./form.css"
 import FormCategories from "./form-components/FormCategories"
+import FormDifficulty from './form-components/FormDifficulty'
 import FormQuestionQuantity from "./form-components/FormQuestionQuantity"
 
 // This is a beefy component
@@ -24,22 +25,8 @@ export default function Form({ number, handleChange }) {
           onChange={handleChange}
         />
       </div> */}
-      <div className="form-item">
-        <label htmlFor="difficulty">Select difficulty level:</label>
-        <select id="difficulty" name="difficulty" onChange={handleChange}>
-          <option value="">Any Difficulty</option>
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
-      </div>
+      <FormDifficulty onChange={handleChange} />
       <FormCategories onChange={handleChange} />
-      {/* <div className="form-item">
-        <label htmlFor="category">Select quiz category:</label>
-        <select id="category" name="category" onChange={handleChange}>
-          {categoryOptions}
-        </select>
-      </div> */}
       <div>
         <div className="form-item checkbox-div">
           <label htmlFor="timed" className="checkbox-container" >Timed quiz:
