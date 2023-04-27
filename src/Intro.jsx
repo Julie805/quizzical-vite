@@ -25,12 +25,14 @@ export default function Intro ({ start, handleUserChoices }) {
     }
     if (input.name === "difficulty")  {
       setDifficulty(input.value)
+      console.log("ran")
     }
     if(input.name === "category") {
       setCategory(numValue)
     }
     if(input.name === "timed") {
       setIsTimed(!isTimed)
+      
     }
   };
 
