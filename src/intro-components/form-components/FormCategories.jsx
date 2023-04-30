@@ -18,7 +18,7 @@ const options = [
 
 export default function FormCategories( {handleChange}) {
   const categoryOptions = options.map((item => {
-    return <option value="{item.value}">{item.label}</option>
+    return <option value={item.value}>{item.label}</option>
   }))
 
    return (

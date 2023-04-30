@@ -15,6 +15,7 @@ export default function Intro ({ start, handleUserChoices }) {
     const input = event.target;
     // Don't need numValue until you know that it is a number input
     const numValue = parseInt(input.value, 10);
+
     if(input.name === "number") {
       if (numValue <1 || numValue > 20) {
         input.setCustomValidity("Please enter a number between 1 and 20.");
@@ -25,16 +26,16 @@ export default function Intro ({ start, handleUserChoices }) {
     }
     if (input.name === "difficulty")  {
       setDifficulty(input.value)
-      console.log("ran")
     }
     if(input.name === "category") {
       setCategory(numValue)
     }
     if(input.name === "timed") {
-      setIsTimed(!isTimed)
-      
+      setIsTimed(prevIsTimed => !prevIsTimed) 
     }
   };
+
+ 
 
   const handleStart = function () {
     start();
