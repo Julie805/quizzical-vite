@@ -23,38 +23,24 @@ export default function App() {
     });
   }
 
-  // Same as above, you can just call setStart directly instead of making this extra function
-  function startQuiz() {
-    setStart(true)
-  }
-
-  // setUserChoices isn't doing anything in here and can be removed
   // Removing setUserChoices just leaves setStart so you can just call it directly
-  function playAgain() {
-    setStart(false)
-    setUserChoices({
-      number: 5,
-      difficulty: "",
-      category: "",
-      isTimed: true
-    })
-  }
+  // function playAgain() {
+  //   setStart(false)
+  // }
 
   return (
     <main>
       <div>
         { start ?
           <Quiz
-            // playAgain={() => setStart(false)} // calling setStart directly
-            playAgain={playAgain}
+            playAgain={() => setStart(false)}
             number={userChoices.number}
             difficulty={userChoices.difficulty}
             category={userChoices.category}
             isTimed={userChoices.isTimed}
           /> :
           <Intro
-            //start={() => setStart(true)} // calling setStart directly
-            start={startQuiz}
+            start={() => setStart(true)}
             handleUserChoices={handleUserChoices}
           />
         }

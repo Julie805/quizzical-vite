@@ -35,8 +35,6 @@ export default function Intro ({ start, handleUserChoices }) {
     }
   };
 
- 
-
   const handleStart = function () {
     start();
     handleUserChoices(number, difficulty, category, isTimed)
