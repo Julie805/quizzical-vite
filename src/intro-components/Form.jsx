@@ -7,7 +7,7 @@ import FormCheckbox from "./form-components/FormCheckbox"
 
 // input values change here so you should probably try to handle the change here
 
-export default function Form({ number, handleChange }) {
+export default function Form({ number, handleChange, handleStart }) {
 
   return (
     <form className="form-container">
@@ -15,6 +15,7 @@ export default function Form({ number, handleChange }) {
       <FormDifficulty handleChange={handleChange} />
       <FormCategories handleChange={handleChange} />
       <FormCheckbox handleChange={handleChange} />
+      <button className="start-button" onClick={handleStart}>Start quiz</button>
     </form>
   );
 }

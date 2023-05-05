@@ -42,7 +42,6 @@ export default function Intro ({ start, handleUserChoices }) {
     handleUserChoices(number, difficulty, category, isTimed)
   }
 
-  // button should be part of the form
   return (
     <div className="intro">
       <h1>Totally Quizzical</h1>
@@ -50,7 +49,7 @@ export default function Intro ({ start, handleUserChoices }) {
       <Form
         number={number}
         handleChange={handleChange}
+        handleStart={handleStart}
       />
-      <button className="start-button" onClick={handleStart}>Start quiz</button>
     </div>
   )}
